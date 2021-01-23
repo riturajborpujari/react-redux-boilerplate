@@ -1,8 +1,13 @@
 import { AUTH_SIGNOUT, AUTH_SIGNIN } from '../actionTypes';
 
+let user = localStorage.getItem('APP_USER');
+if(user){
+  user = JSON.parse(user);
+}
+
 const initialState = {
-  isSignedIn: false,
-  user: null
+  isSignedIn: user? true: false,
+  user
 };
 
 const AuthReducer = (state = initialState, action) => {
