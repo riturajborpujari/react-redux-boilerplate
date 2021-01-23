@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-const Button = styled.span`
+const Button = styled.button`
+  border: none;
   padding: ${props => props.padding ? props.padding : '6px 16px'};
   ${props => props.bg && `background-color: ${props.bg};`}
   ${props => props.color && `color: ${props.color};`}
