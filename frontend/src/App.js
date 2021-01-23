@@ -2,7 +2,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import store from './store';
 import Homepage from './containers/Homepage';
-import PrivateRoute from './components/general/PrivateRoute';
+import PrivateRoute from './components/PrivateRoute';
 import SigninForm from './components/Auth/Signin';
 
 function App() {
