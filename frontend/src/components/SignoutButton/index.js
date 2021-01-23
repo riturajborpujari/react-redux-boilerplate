@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 
-import * as AuthActions from '../../store/actions/Auth';
+import * as AuthActions from '../../redux/actions/Auth';
 import Auth from '../../services/Auth';
 import Button from '../../components/Button';
 

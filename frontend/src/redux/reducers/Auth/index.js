@@ -1,4 +1,4 @@
-import { AUTH_SIGNOUT, AUTH_SIGNIN } from '../actionTypes';
+import { AUTH_SIGNOUT, AUTH_SIGNIN } from '../../actionTypes';
 
 let user = localStorage.getItem('APP_USER');
 if(user){

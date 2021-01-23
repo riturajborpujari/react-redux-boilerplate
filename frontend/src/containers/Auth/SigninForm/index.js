@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { Formik } from 'formik';
 import { Box, Button, Form, FormField, Heading } from '../../../components';
 import Auth from '../../../services/Auth';
-import * as AuthActions from '../../../store/actions/Auth';
+import * as AuthActions from '../../../redux/actions/Auth';
 
 const SigninForm = () => {
   const dispatch = useDispatch();
