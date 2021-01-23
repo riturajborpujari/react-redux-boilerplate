@@ -1,5 +1,4 @@
-import Greeting from '../components/Greeting';
-import SignoutButton from './Auth/Signout';
+import {Greeting, SignoutButton} from '../../components';
 
 const Homepage = () => {
   return (

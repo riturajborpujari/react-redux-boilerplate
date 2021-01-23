@@ -3,20 +3,23 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import store from './store';
 import Homepage from './containers/Homepage';
 import PrivateRoute from './components/PrivateRoute';
-import SigninForm from './components/Auth/Signin';
+import SigninForm from './containers/Auth/SigninForm';
+import Box from './components/Box';
 
 function App() {
   return (
-    <Provider store={store}>
-      <Router>
-        <Switch>
-          <Route path="/signin" component={SigninForm} />
-          <PrivateRoute path="/">
-            <Homepage />
-          </PrivateRoute>
-        </Switch>
-      </Router>
-    </Provider>
+    <Box padding={4}>
+      <Provider store={store}>
+        <Router>
+          <Switch>
+            <Route path="/signin" component={SigninForm} />
+            <PrivateRoute path="/">
+              <Homepage />
+            </PrivateRoute>
+          </Switch>
+        </Router>
+      </Provider>
+    </Box>
   );
 }
 
