@@ -1,14 +1,14 @@
 import Greeting from '../components/Greeting';
-
-import SigninForm from '../components/Auth/Signin';
+import SignoutButton from '../components/Auth/Signout';
 
 const Homepage = () => {
-  return(
-    <div aria-label="main">
-      <Greeting name="User"/>
-      <SigninForm />
+  return (
+    <div>
+      <Greeting name="User" />
+
+      <SignoutButton />
     </div>
-  )  
+  )
 }
 
 export default Homepage;
