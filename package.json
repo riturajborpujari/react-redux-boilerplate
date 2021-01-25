@@ -2,7 +2,11 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/",
+  "homepage": "./",
+  "author": {
+    "name": "Rituraj Borpujari",
+    "url": "https://in.linkedin.com/in/riturajborpujari"
+  },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
     "@testing-library/jest-dom": "^5.11.4",

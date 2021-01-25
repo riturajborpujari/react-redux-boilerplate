@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# React Redux boilerplate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+A boilerplate __React__ application with __Redux__. It has been _bootstrapped_ with `create-react-app`.
 
-In the project directory, you can run:
+## How to start
 
-### `yarn start`
+To start this project perform the follwing steps
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Install dependencies
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    `npm install` _or_ `yarn`, if you _also_ prefer __Yarn__ like the developer of this boilerplate project.
 
-### `yarn test`
+2. Run development server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    `npm start` _or_ `yarn start`
 
-### `yarn build`
+## Installed Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Some dependencies are aready installed to get you going quickly.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. __React Bootstrap__
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    For your basic styling needs, package `react-bootstrap` and `bootstrap` are installed
 
-### `yarn eject`
+2. __Styled components__
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    For your custom styling needs, package `styled-components` is installed.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Some __example components__ are already built with `styled-components`. These are just for demo and __are not meant for use in production__
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. __React Icons__
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    For all your icon needs, package `@react-icons/all-files` is installed.
 
-## Learn More
+    It gives you __all the icons__ from major providers like `Bootstrap`, `Material UI`, `Font Awesome` and many more, all ready to be imported directly.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    __Example__ import statements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```javascript
+    // Load icon `AccountBox` from `Material UI`
+    import { MdAccountBox } from '@react-icons/all-files/md/MdAccountBox';
 
-### Code Splitting
+    // Load icon `ArrowLeft` from `Font Awesome`
+    import { FaArrowLeft } from '@react-icons/all-files/fa/FaArrowLeft';
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. __Redux__
 
-### Analyzing the Bundle Size
+    For all your state management needs, package `redux`, and `react-redux` are installed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    A demo __Authentication__ service is set up that uses __Redux__ to maintain user state is already set up. You can modify it or start new.
 
-### Making a Progressive Web App
+    Redux code for `store`, `reducers` and `actions`, `actionTypes` are placed inside `redux` directory in project root.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. __Formik__
 
-### Advanced Configuration
+    For all your _form_ handling needs, __React__ recommended package `formik` is installed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    The demo _authentication_ service uses __Formik__ for its `Sign In` form.
 
-### Deployment
+6. __React Router__
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    For all your routing needs, package `react-router-dom` is already installed.
 
-### `yarn build` fails to minify
+## Environment files
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The following _environment files_ are set up
+
+1. `.env.production`
+
+    Used in __production__ cases. When you run `npm run build` _or_ `yarn build`, React automatically uses any environment variables that starts with `REACT_APP_`
+
+    Example demo environment variable `REACT_APP_API_BASE_URL` is already setup.
+
+2. `.env.development`
+
+    Used in __development__ cases. When you run `npm start` _or_ `yarn start`, React automatically uses any environment variables that starts with `REACT_APP_`
+
+    Example demo environment variable `REACT_APP_API_BASE_URL` is already setup.
+
+## LocalStorage Usage
+
+The demo _authentication_ service uses `localStorage` to store variable `APP_USER` for persisting user sessions.
